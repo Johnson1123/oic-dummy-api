@@ -17,8 +17,15 @@ import mall from "./data/product.js";
 import dogs from "./data/dogs.js";
 import phone from "./data/phone.js";
 import hotel from "./data/hotel.js";
+import cors from "cors";
 
 const app = express();
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 const allProduct = [...Cars, ...mall, ...dogs, ...phone, ...hotel];
 
